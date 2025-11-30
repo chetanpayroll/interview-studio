@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+
+    <!-- Primary Meta Tags -->
+    <title>Interview Studio | Global Payroll Implementation Consultant</title>
+    <meta name="title" content="Interview Studio | Global Payroll Implementation Consultant">
+    <meta name="description" content="Professional interview preparation for Global Payroll Implementation Consultants. 13+ years experience, 1,500+ payroll cycles, 25+ countries. Expert answers to common interview questions.">
+    <meta name="keywords" content="payroll, implementation, consultant, interview, global payroll, APAC, EMEA, LATAM, interview preparation, payroll expert">
+    <meta name="author" content="GMP Payroll">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://interview-studio.gmppayroll.com/">
+    <meta property="og:title" content="Interview Studio | Global Payroll Implementation Consultant">
+    <meta property="og:description" content="Professional interview preparation for Global Payroll Implementation Consultants. Expert answers backed by 13+ years of experience.">
+    <meta property="og:image" content="/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://interview-studio.gmppayroll.com/">
+    <meta property="twitter:title" content="Interview Studio | Global Payroll Implementation Consultant">
+    <meta property="twitter:description" content="Professional interview preparation for Global Payroll Implementation Consultants. Expert answers backed by 13+ years of experience.">
+    <meta property="twitter:image" content="/og-image.png">
+
+    <!-- PWA Meta Tags -->
+    <meta name="application-name" content="Interview Studio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Interview Studio">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)">
+
+    <!-- PWA Links -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-192x192.png">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Interview Studio",
+      "description": "Professional interview preparation for Global Payroll Implementation Consultants",
+      "url": "https://interview-studio.gmppayroll.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "GMP Payroll",
+        "jobTitle": "Global Payroll Implementation Consultant",
+        "description": "13+ years of experience in global payroll implementation across 25+ countries"
+      }
+    }
+    </script>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- ============================================ -->
+    <!-- THEME TOGGLE & MOBILE CONTROLS -->
+    <!-- ============================================ -->
+    <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </div>
+
+    <!-- Install PWA Prompt -->
+    <div class="install-prompt" id="installPrompt" style="display: none;">
+        <div class="install-prompt-content">
+            <div class="install-prompt-icon">📱</div>
+            <div class="install-prompt-text">
+                <h4>Install Interview Studio</h4>
+                <p>Access offline and get a better experience</p>
+            </div>
+            <button class="install-btn" id="installBtn">Install</button>
+            <button class="close-prompt" id="closePrompt" aria-label="Close install prompt">×</button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION -->
+    <!-- ============================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-in">Verified Interview Answers</div>
+            <h1 class="hero-title animate-in">Global Payroll Implementation</h1>
+            <h2 class="hero-subtitle animate-in">Interview Preparation Studio</h2>
+            <p class="hero-description animate-in">13+ Years of Experience | 1,500+ Payroll Cycles | 25+ Countries</p>
+            <div class="hero-cta animate-in">
+                <a href="#interview-section" class="btn-primary">Explore Interview Answers</a>
+                <a href="#profile" class="btn-secondary">View Profile</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PROFESSIONAL PROFILE SUMMARY -->
+    <!-- ============================================ -->
+    <section class="profile-section" id="profile">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Professional Profile</span>
+                <h2 class="section-title">Expertise Overview</h2>
+            </div>
+            <div class="profile-grid">
+                <div class="profile-card glass-card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Global Coverage</h3>
+                    <p>Multi-country payroll operations across 25+ countries in APAC, EMEA, and LATAM regions</p>
+                </div>
+                <div class="profile-card glass-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Implementation Excellence</h3>
+                    <p>1,500+ complete payroll cycles with 99.8% accuracy rate across diverse client portfolios</p>
+                </div>
+                <div class="profile-card glass-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Career Growth</h3>
+                    <p>5 promotions in 4 years at Deel, recognized for delivery excellence and client satisfaction</p>
+                </div>
+                <div class="profile-card glass-card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Automation Expertise</h3>
+                    <p>60% reduction in manual validation time through Google Apps Script and VBA solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- INTERVIEW QUESTIONS SECTION -->
+    <!-- ============================================ -->
+    <section class="interview-section" id="interview-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Main Focus</span>
+                <h2 class="section-title">Verified Interview Answers</h2>
+                <p class="section-description">Real responses from a proven Global Payroll Implementation Consultant</p>
+            </div>
+
+            <div class="interview-questions">
+                
+                <!-- Question 1 -->
+                <div class="interview-card glass-card" data-question="1">
+                    <div class="question-header" onclick="toggleAnswer(1)">
+                        <div class="question-content">
+                            <span class="question-number">01</span>
+                            <h3 class="question-text">Tell me about yourself introduction?</h3>
+                        </div>
+                        <div class="expand-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="answer-content" id="answer-1">
+                        <div class="answer-text">
+                            <p>Thank you very much for your time today. I truly appreciate this opportunity to speak with you.</p>
+                            <p>I am a Global Payroll Implementation Consultant with over 13 years of experience supporting organizations with complex, multi-country payroll operations and system implementations. Over the years, I have been fortunate to work closely with diverse clients and global teams, and I consider those learning experiences a true privilege.</p>
+                            <p>Currently, I work with Deel, where I lead and support end-to-end payroll implementations across multiple countries in the APAC and EMEA regions. Over the last four years, I have received five promotions, which I see as a reflection of the trust, encouragement, and support I've received from my clients, colleagues, and leadership. I'm truly grateful for that confidence.</p>
+                            <p>Throughout my career, I have been directly involved in more than 1,500 complete payroll cycles with a 99% accuracy rate. This includes end-to-end payroll implementation—from kickoff and discovery calls through client setup, employee onboarding, system configuration, parallel runs, go-live support, and ongoing operations. Before transitioning to implementation consulting, I also handled complete payroll processing operations for Hong Kong, Singapore, and the UAE, which gave me strong operational foundations. I have comprehensive hands-on experience with statutory compliance in Hong Kong, Singapore, and the UAE, including tax regulations, social security contributions, and mandatory benefits compliance.</p>
+                            <p>More recently, I have had the opportunity to lead complex migrations from legacy payroll platforms to Deel's global payroll solution. In these projects, I worked closely with clients, internal stakeholders, and external vendors to ensure smooth and carefully planned transitions with minimal disruption to day-to-day payroll operations, which is always a top priority for clients.</p>
+                            <p>Alongside implementation and processing, I also enjoy adding value through automation and data visibility. I've built automation solutions using Google Apps Script and VBA that have reduced manual validation time by approximately 60%, creating more efficient and error-free environments. I've also developed real-time dashboards for implementation tracking, risk visibility, and service comparison, helping leadership make faster and better-informed decisions.</p>
+                            <p>At this stage of my career, I am keen to contribute at a more strategic level—working on larger and more complex global implementations, supporting payroll operations at scale, mentoring team members, and helping shape how global payroll solutions are delivered and continuously improved.</p>
+                            <p>That is what truly motivates me, and it's why I'm genuinely excited and honored to be exploring this opportunity with you. Thank you once again for your time and consideration.</p>
+                        </div>
+                        <button class="copy-btn" onclick="copyAnswer(1)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy Answer
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="interview-card glass-card" data-question="2">
+                    <div class="question-header" onclick="toggleAnswer(2)">
+                        <div class="question-content">
+                            <span class="question-number">02</span>
+                            <h3 class="question-text">How do you deal with escalations?</h3>
+                        </div>
+                        <div class="expand-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="answer-content" id="answer-2">
+                        <div class="answer-text">
+                            <p>Thank you for this important question. I truly believe that escalations are an opportunity to demonstrate accountability and problem-solving, rather than something to fear.</p>
+                            <p>When an escalation occurs, my first priority is to remain calm and take full ownership of the situation—even if the issue wasn't directly caused by me or my team. I've learned that clients need to see someone stepping forward with responsibility, and I'm honored to be in a position where I can do that.</p>
+                            <p>I immediately focus on understanding the real impact. I ask myself: does this affect payroll processing, statutory compliance, or employee payments? I ask very clear and respectful questions to identify exactly what happened, when it occurred, and who is impacted, so I can respond appropriately.</p>
+                            <p>The next step is always risk containment. If payroll is at risk, I work quickly to implement a temporary workaround to ensure employees are not affected while we develop the permanent solution. I firmly believe that business continuity and protecting employees' livelihoods must always come first.</p>
+                            <p>Throughout this process, I maintain very transparent communication with all stakeholders. I inform them honestly about what has happened, what actions we are taking, and when they can expect the next update. I've learned that it's far better to be transparent about challenges than to hide issues or provide unrealistic timelines—that only erodes trust.</p>
+                            <p>Once the immediate issue is stabilized, I shift my focus to understanding the root cause. I carefully review the process, strengthen our validations, and tighten controls to ensure that the same escalation doesn't happen again. I see each escalation as a learning opportunity to improve our systems and processes.</p>
+                            <p><strong>Example:</strong> If I may share a brief example—in one project, just before go-live, the client escalated that salary outputs weren't matching their legacy system. Rather than becoming defensive, I immediately paused the payroll run and personally pulled both data sets to perform a detailed row-level reconciliation.</p>
+                            <p>I discovered that a regional allowance had been mapped differently in the new system. I quickly implemented a calculation adjustment for that current cycle to protect employee payments, communicated the issue and solution transparently to the client, and then worked to update the configuration and validation logic permanently for future cycles.</p>
+                            <p>I'm grateful to say that payroll went live on time, and the client later shared that they truly appreciated how we handled the escalation with honesty and speed.</p>
+                            <p>In summary, I approach escalations with ownership, structure, transparency, and a commitment to permanent resolution—never with panic or blame.</p>
+                        </div>
+                        <button class="copy-btn" onclick="copyAnswer(2)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy Answer
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="interview-card glass-card" data-question="3">
+                    <div class="question-header" onclick="toggleAnswer(3)">
+                        <div class="question-content">
+                            <span class="question-number">03</span>
+                            <h3 class="question-text">How do you deal with tough clients?</h3>
+                        </div>
+                        <div class="expand-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="answer-content" id="answer-3">
+                        <div class="answer-text">
+                            <p>Thank you for asking. This is something I've given a lot of thought to over the years.</p>
+                            <p>I've learned that when dealing with what might seem like a "tough" client, it's important to first understand the reason behind their behavior rather than simply reacting to it. In my experience, most client frustration comes from real pressure they're facing—tight timelines, high stakes, or perhaps previous negative experiences with other vendors. Once I remind myself of that, it becomes much easier to respond with empathy rather than defensiveness.</p>
+                            <p>My approach is to always remain calm and professional, listen very carefully without interrupting, and genuinely acknowledge their concerns so they feel heard and respected. I've found that once the initial tension is addressed, I can gently bring the conversation back to facts—what exactly happened, what the impact is, and what our clear resolution plan looks like.</p>
+                            <p>I focus on providing very specific timelines, transparent and frequent updates, and delivering quick, visible progress wherever possible. Even a small early win can help rebuild confidence and show that we're committed to their success.</p>
+                            <p>My goal is never to "win the argument" or prove I'm right. My goal is to earn back the client's trust through consistency, reliable delivery, and genuine accountability. I've been fortunate to see that, over time, many of the clients who started out as the most challenging actually became our strongest and most loyal long-term partners.</p>
+                            <p><strong>Example:</strong> If I may share an example—in one global payroll implementation, I worked with a client who was understandably very cautious and sometimes quite direct due to multiple missed deadlines from their previous vendor. They often started our calls already in an escalated mindset.</p>
+                            <p>Instead of taking it personally or reacting defensively, I acknowledged their past difficulties, explained each step of our implementation process in very simple and transparent terms, and began sending brief weekly status updates that clearly outlined milestones, progress, and any potential risks.</p>
+                            <p>I also provided them with early payroll preview reports before each actual payroll run, which gave them much more visibility and control. I'm very pleased to say that within just two payroll cycles, their entire tone changed. They became one of our most cooperative and collaborative clients, and they've even referred other organizations to us since then.</p>
+                            <p>So in short, I deal with tough clients by leading with empathy, staying calm and transparent, delivering consistent results, and always remembering that their frustration usually comes from a place of genuine concern—not personal animosity.</p>
+                        </div>
+                        <button class="copy-btn" onclick="copyAnswer(3)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy Answer
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CAREER HIGHLIGHTS TIMELINE -->
+    <!-- ============================================ -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Career Journey</span>
+                <h2 class="section-title">Professional Milestones</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-year">2024-2025</span>
+                        <h3>Senior Implementation Consultant</h3>
+                        <p>Leading complex PY360 to Deel migrations across Egypt, Israel, and Hong Kong with enterprise clients</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-year">2021-2024</span>
+                        <h3>5 Promotions at Deel</h3>
+                        <p>Rapid career progression through consistent delivery excellence and client satisfaction across APAC & EMEA</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-year">2018-2021</span>
+                        <h3>Multi-Country Payroll Operations</h3>
+                        <p>Managed complete payroll processing for Hong Kong, Singapore, and UAE with full statutory compliance</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-year">2012-2018</span>
+                        <h3>Foundation Years</h3>
+                        <p>Built expertise in payroll systems, compliance frameworks, and implementation methodologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TOOLS & AUTOMATION SECTION -->
+    <!-- ============================================ -->
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Technical Excellence</span>
+                <h2 class="section-title">Tools, Automation & Dashboards</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card glass-card">
+                    <div class="tool-icon">📊</div>
+                    <h3>Google Apps Script</h3>
+                    <p>Custom automation solutions reducing manual validation time by 60%</p>
+                </div>
+                <div class="tool-card glass-card">
+                    <div class="tool-icon">📈</div>
+                    <h3>Real-Time Dashboards</h3>
+                    <p>Implementation tracking, risk visibility, and service comparison tools</p>
+                </div>
+                <div class="tool-card glass-card">
+                    <div class="tool-icon">⚡</div>
+                    <h3>VBA Solutions</h3>
+                    <p>Advanced Excel macros for data transformation and validation</p>
+                </div>
+                <div class="tool-card glass-card">
+                    <div class="tool-icon">🔄</div>
+                    <h3>Migration Tools</h3>
+                    <p>Data mapping frameworks for seamless platform transitions</p>
+                </div>
+                <div class="tool-card glass-card">
+                    <div class="tool-icon">✅</div>
+                    <h3>Quality Assurance</h3>
+                    <p>Automated validation frameworks ensuring 99.8% accuracy</p>
+                </div>
+                <div class="tool-card glass-card">
+                    <div class="tool-icon">📋</div>
+                    <h3>Documentation Systems</h3>
+                    <p>Comprehensive SOPs and visual implementation guides</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CALL TO ACTION SECTION -->
+    <!-- ============================================ -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content glass-card">
+                <h2>Ready to Explore Further?</h2>
+                <p>Download complete interview preparation materials or visit the main portfolio</p>
+                <div class="cta-buttons">
+                    <a href="https://gmppayroll.com" class="btn-primary" target="_blank">Visit Main Portfolio</a>
+                    <button class="btn-secondary" onclick="window.print()">Download PDF</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>GMP Payroll Interview Studio</h3>
+                    <p>Professional Interview Preparation for Global Payroll Experts</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://gmppayroll.com">Main Portfolio</a>
+                    <a href="#interview-section">Interview Answers</a>
+                    <a href="#profile">Profile</a>
+                    <a href="#timeline">Timeline</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GMP Payroll. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+
+    <!-- PWA Registration -->
+    <script>
+        // Register Service Worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((registration) => {
+                        console.log('✅ Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('❌ Service Worker registration failed:', error);
+                    });
+            });
+        }
+
+        // Install PWA prompt
+        let deferredPrompt;
+        const installPrompt = document.getElementById('installPrompt');
+        const installBtn = document.getElementById('installBtn');
+        const closePrompt = document.getElementById('closePrompt');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+
+            // Show install prompt after 3 seconds
+            setTimeout(() => {
+                if (installPrompt) {
+                    installPrompt.style.display = 'block';
+                    setTimeout(() => installPrompt.classList.add('show'), 100);
+                }
+            }, 3000);
+        });
+
+        if (installBtn) {
+            installBtn.addEventListener('click', async () => {
+                if (!deferredPrompt) return;
+
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+
+                console.log(`User response to install prompt: ${outcome}`);
+                deferredPrompt = null;
+
+                if (installPrompt) {
+                    installPrompt.classList.remove('show');
+                    setTimeout(() => installPrompt.style.display = 'none', 300);
+                }
+            });
+        }
+
+        if (closePrompt) {
+            closePrompt.addEventListener('click', () => {
+                if (installPrompt) {
+                    installPrompt.classList.remove('show');
+                    setTimeout(() => installPrompt.style.display = 'none', 300);
+                }
+            });
+        }
+
+        window.addEventListener('appinstalled', () => {
+            console.log('✅ PWA installed successfully');
+            deferredPrompt = null;
+        });
+    </script>
+</body>
+</html>
