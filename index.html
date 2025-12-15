@@ -648,6 +648,74 @@
                     </div>
                 </div>
 
+                <!-- Question 13 -->
+                <div class="interview-card glass-card" data-question="13">
+                    <div class="question-header" onclick="toggleAnswer(13)">
+                        <div class="question-content">
+                            <span class="question-number">13</span>
+                            <h3 class="question-text">A client reports that 50 employees were underpaid in their first Rippling payroll. What's your troubleshooting process?</h3>
+                        </div>
+                        <div class="expand-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="answer-content" id="answer-13">
+                        <div class="answer-text">
+                            <p>"This is a critical issue that needs immediate action. Here's exactly how I'd handle it:</p>
+                            <p><strong>Step 1: Stay Calm & Acknowledge (First 15 minutes)</strong><br>
+                            I'd immediately respond to the client: "Thank you for raising this urgently. I understand 50 employees were underpaid—this is my top priority. I'm investigating right now and will have an update for you within 2 hours with root cause and a resolution plan."</p>
+                            <p>Staying calm is key because the client is likely stressed. I need to show I'm in control.</p>
+                            <p><strong>Step 2: Gather Facts (Next 30 minutes)</strong><br>
+                            I'd ask specific questions to understand the scope:<br>
+                            • Which 50 employees? Are they in the same department, location, or pay group?<br>
+                            • What exactly was underpaid? Full salary missing or partial amounts?<br>
+                            • What should they have been paid vs. what they actually received?<br>
+                            • Was this issue caught before or after bank transfer?<br>
+                            • Is this affecting only new hires, or also existing employees?</p>
+                            <p>I'd also pull reports from Rippling:<br>
+                            • Payroll register for the affected cycle<br>
+                            • Individual payslips for sample employees<br>
+                            • Payroll input file vs. output file comparison</p>
+                            <p><strong>Step 3: Identify Root Cause (Next 45 minutes)</strong><br>
+                            Based on my experience, underpayments usually fall into a few categories:</p>
+                            <p>Possibility 1: Data Migration Issue - Were salary amounts imported correctly from old system?<br>
+                            Possibility 2: Pro-Ration Error - For new hires who started mid-month, did Rippling prorate correctly?<br>
+                            Possibility 3: Missing Earnings Component - Were all earning types configured?<br>
+                            Possibility 4: Pay Schedule Mismatch - Were employees assigned to the correct pay schedule?<br>
+                            Possibility 5: Approval/Processing Error - Was payroll fully approved/finalized before submission?</p>
+                            <p>Let's say I find: "40 of the 50 employees are missing their 'Housing Allowance' earning component. This earning code was configured but wasn't active for the November cycle."</p>
+                            <p><strong>Step 4: Fix & Validate (Next 30 minutes)</strong><br>
+                            Once I identify the root cause, I'd fix it in Rippling:<br>
+                            • Activate the missing earning code<br>
+                            • Re-run payroll calculation for the 50 employees in a test environment<br>
+                            • Generate new payslips and validate the corrected amounts</p>
+                            <p><strong>Step 5: Communication to Client (Next 15 minutes)</strong><br>
+                            I'd send a detailed update explaining the root cause, the fix plan including supplemental payroll timing, and apologize while explaining prevention measures.</p>
+                            <p><strong>Step 6: Execute Fix (Next 1-2 days)</strong><br>
+                            • Process supplemental payroll for the 50 employees<br>
+                            • Notify affected employees directly<br>
+                            • Update year-to-date records</p>
+                            <p><strong>Step 7: Post-Mortem & Prevention (After fix)</strong><br>
+                            I'd conduct a lessons-learned session and create a "Pre-Payroll Checklist" to prevent recurrence.</p>
+                            <p><strong>Key Principles:</strong><br>
+                            • Speed: Respond quickly to show the client they're a priority<br>
+                            • Transparency: Explain what went wrong without making excuses<br>
+                            • Ownership: Take responsibility rather than blaming the system or client<br>
+                            • Prevention: Always close the loop by showing how you'll avoid repeat issues</p>
+                            <p>In my 13 years, I've learned that clients forgive mistakes if you handle them with urgency, honesty, and clear resolution plans."</p>
+                        </div>
+                        <button class="copy-btn" onclick="copyAnswer(13)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy Answer
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
