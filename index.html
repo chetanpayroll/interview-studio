@@ -578,6 +578,76 @@
                     </div>
                 </div>
 
+                <!-- Question 12 -->
+                <div class="interview-card glass-card" data-question="12">
+                    <div class="question-header" onclick="toggleAnswer(12)">
+                        <div class="question-content">
+                            <span class="question-number">12</span>
+                            <h3 class="question-text">Walk me through how you'd approach a data migration for a client moving from ADP to Rippling.</h3>
+                        </div>
+                        <div class="expand-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="answer-content" id="answer-12">
+                        <div class="answer-text">
+                            <p>"I'd break this into clear phases to ensure nothing is missed.</p>
+                            <p><strong>Phase 1: Data Discovery (Week 1)</strong><br>
+                            First, I'd understand what data exists in ADP and what Rippling needs:<br>
+                            • Employee master data: name, employee ID, email, department, manager, location, hire date, termination date<br>
+                            • Compensation: salary, pay frequency, currency, pay type (hourly/salaried)<br>
+                            • Tax information: tax forms (W-4 in US), withholding allowances, state tax elections<br>
+                            • Benefits: health insurance elections, 401k contributions, FSA/HSA<br>
+                            • Payroll history: year-to-date earnings, taxes withheld, deductions<br>
+                            • Time off balances: PTO, sick leave, unpaid leave accruals<br>
+                            • Direct deposit: bank information, account numbers, deposit allocations</p>
+                            <p>I'd also check: What's the historical cutoff? (Usually YTD data at minimum.) Are there any custom fields or deductions unique to the client?</p>
+                            <p><strong>Phase 2: Data Extraction (Week 2)</strong><br>
+                            I'd work with the client's ADP administrator to export data. ADP typically provides standard reports for employee data, payroll history, and benefits. If the client doesn't have admin access, I'd guide them on requesting exports from ADP support.</p>
+                            <p>I'd also identify "gotchas":<br>
+                            • Are there terminated employees who need YTD data for tax purposes?<br>
+                            • Are there any employees on leave who might not appear in active reports?<br>
+                            • Are there pending bonuses or adjustments not yet processed?</p>
+                            <p><strong>Phase 3: Data Mapping (Week 2-3)</strong><br>
+                            I'd create a mapping document showing how ADP fields correspond to Rippling fields. I'd highlight any fields that don't map cleanly. For example, if ADP uses custom earning codes like "Shift Differential," I'd need to configure equivalent earnings in Rippling.</p>
+                            <p><strong>Phase 4: Data Cleansing (Week 3)</strong><br>
+                            Data quality is critical. I'd run validation checks:<br>
+                            • Completeness: Are required fields populated? (SSN, hire date, etc.)<br>
+                            • Format: Are dates in consistent format? Are currency values clean?<br>
+                            • Duplicates: Are there duplicate employee IDs or emails?<br>
+                            • Accuracy: Do managers exist as employees? Are department codes valid?</p>
+                            <p>I'd send the client a "data issues report" listing problems: "45 employees missing email addresses. 12 employees with invalid manager IDs. 3 employees with mismatched SSN formats."</p>
+                            <p><strong>Phase 5: Data Transformation (Week 4)</strong><br>
+                            Using Google Sheets or Excel, I'd transform the cleaned ADP data into Rippling's import format.</p>
+                            <p><strong>Phase 6: Test Migration (Week 4)</strong><br>
+                            I'd never import directly into production. I'd create a Rippling sandbox/test environment and do a trial import with a subset of data—say 20 employees covering different scenarios.</p>
+                            <p><strong>Phase 7: Full Migration (Week 5)</strong><br>
+                            Once the test migration is validated, I'd schedule the full data import during a non-payroll week to avoid conflicts.</p>
+                            <p><strong>Phase 8: Validation (Week 5-6)</strong><br>
+                            After import, I'd run reconciliation checks and create a "Post-Migration Validation Checklist."</p>
+                            <p><strong>Phase 9: Parallel Run (Week 6-7)</strong><br>
+                            Before completely cutting over, I'd recommend processing one payroll cycle in both ADP and Rippling to compare outputs.</p>
+                            <p><strong>Phase 10: Go-Live (Week 8)</strong><br>
+                            Once parallel run is successful, we'd officially cut over.</p>
+                            <p><strong>Key Success Factors:</strong><br>
+                            • Communication: Weekly updates to stakeholders on migration status<br>
+                            • Documentation: Every step documented so it's repeatable if needed<br>
+                            • Validation, Validation, Validation: Never assume data is correct—always verify<br>
+                            • Buffer Time: Always allow 1-2 weeks buffer for unexpected issues</p>
+                            <p>This structured approach has helped me achieve 99.8% accuracy across migrations."</p>
+                        </div>
+                        <button class="copy-btn" onclick="copyAnswer(12)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy Answer
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
