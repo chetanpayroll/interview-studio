@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "version": "3.0.0",
+    "lastUpdated": "2025-12-09",
+    "totalQuestions": 26,
+    "categories": [
+      "behavioral",
+      "technical",
+      "scenario",
+      "rippling-specific"
+    ],
+    "difficultyLevels": [
+      "easy",
+      "medium",
+      "hard"
+    ],
+    "companies": [
+      "general",
+      "deel",
+      "rippling"
+    ],
+    "interviewRounds": [
+      "all",
+      "round-1",
+      "round-2",
+      "round-3",
+      "round-4"
+    ],
+    "author": "GMP Payroll",
+    "description": "Comprehensive interview preparation for Global Payroll Implementation Consultants - General, Deel, and Rippling"
+  },
+  "companyInfo": {
+    "rippling": {
+      "name": "Rippling",
+      "segment": "SMB (Small and Medium-sized Businesses: 1-500 employees)",
+      "description": "Unified HR, IT, and Finance platform",
+      "keyDifferentiators": [
+        "All-in-one platform (HR + IT + Finance)",
+        "90-second global employee onboarding",
+        "Single source of truth",
+        "No need for multiple integrations"
+      ]
+    }
+  },
+  "questions": []
+}

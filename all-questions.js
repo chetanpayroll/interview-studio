@@ -1,0 +1,87 @@
+// ============================================
+// ALL QUESTIONS DATABASE - 26 Interview Q&As
+// Interview Studio v3.0 - Complete Database
+// ============================================
+
+const ALL_QUESTIONS = {
+    metadata: {
+        version: "3.0.0",
+        lastUpdated: "2025-12-09",
+        totalQuestions: 26,
+        categories: ["behavioral", "technical", "scenario", "rippling-specific"],
+        difficultyLevels: ["easy", "medium", "hard"],
+        companies: ["general", "deel", "rippling"],
+        interviewRounds: ["all", "round-1", "round-2", "round-3", "round-4"]
+    },
+
+    questions: [
+        // ========== GENERAL/DEEL QUESTIONS (Q1-Q10) ==========
+        {
+            id: 1,
+            question: "Tell me about yourself introduction?",
+            category: "behavioral",
+            difficulty: "medium",
+            company: "general",
+            interviewRound: "all",
+            keywords: ["introduction", "background", "experience", "motivation", "career"],
+            estimatedReadTime: 3,
+            tags: ["career-overview", "professional-background", "achievements"],
+            importance: "high",
+            answer: "Thank you very much for your time today. I truly appreciate this opportunity to speak with you.\n\nI am a Global Payroll Implementation Consultant with over 13 years of experience supporting organizations with complex, multi-country payroll operations and system implementations. Over the years, I have been fortunate to work closely with diverse clients and global teams, and I consider those learning experiences a true privilege.\n\nCurrently, I work with Deel, where I lead and support end-to-end payroll implementations across multiple countries in the APAC and EMEA regions. Over the last four years, I have received five promotions, which I see as a reflection of the trust, encouragement, and support I've received from my clients, colleagues, and leadership. I'm truly grateful for that confidence.\n\nThroughout my career, I have been directly involved in more than 1,500 complete payroll cycles with a 99% accuracy rate. This includes end-to-end payroll implementation—from kickoff and discovery calls through client setup, employee onboarding, system configuration, parallel runs, go-live support, and ongoing operations. Before transitioning to implementation consulting, I also handled complete payroll processing operations for Hong Kong, Singapore, and the UAE, which gave me strong operational foundations. I have comprehensive hands-on experience with statutory compliance in Hong Kong, Singapore, and the UAE, including tax regulations, social security contributions, and mandatory benefits compliance.\n\nMore recently, I have had the opportunity to lead complex migrations from legacy payroll platforms to Deel's global payroll solution. In these projects, I worked closely with clients, internal stakeholders, and external vendors to ensure smooth and carefully planned transitions with minimal disruption to day-to-day payroll operations, which is always a top priority for clients.\n\nAlongside implementation and processing, I also enjoy adding value through automation and data visibility. I've built automation solutions using Google Apps Script and VBA that have reduced manual validation time by approximately 60%, creating more efficient and error-free environments. I've also developed real-time dashboards for implementation tracking, risk visibility, and service comparison, helping leadership make faster and better-informed decisions.\n\nAt this stage of my career, I am keen to contribute at a more strategic level—working on larger and more complex global implementations, supporting payroll operations at scale, mentoring team members, and helping shape how global payroll solutions are delivered and continuously improved.\n\nThat is what truly motivates me, and it's why I'm genuinely excited and honored to be exploring this opportunity with you. Thank you once again for your time and consideration.",
+            keyTakeaways: [
+                "13+ years of Global Payroll Implementation experience",
+                "1,500+ payroll cycles with 99% accuracy",
+                "5 promotions in 4 years at Deel",
+                "APAC & EMEA regional expertise",
+                "Automation & dashboard development skills"
+            ]
+        },
+
+        {
+            id: 2,
+            question: "How do you deal with escalations?",
+            category: "scenario",
+            difficulty: "hard",
+            company: "general",
+            interviewRound: "all",
+            keywords: ["escalations", "problem-solving", "crisis-management", "accountability"],
+            estimatedReadTime: 3,
+            tags: ["conflict-resolution", "stakeholder-management", "transparency"],
+            importance: "high",
+            answer: "Thank you for this important question. I truly believe that escalations are an opportunity to demonstrate accountability and problem-solving, rather than something to fear.\n\nWhen an escalation occurs, my first priority is to remain calm and take full ownership of the situation—even if the issue wasn't directly caused by me or my team. I've learned that clients need to see someone stepping forward with responsibility, and I'm honored to be in a position where I can do that.\n\nI immediately focus on understanding the real impact. I ask myself: does this affect payroll processing, statutory compliance, or employee payments? I ask very clear and respectful questions to identify exactly what happened, when it occurred, and who is impacted, so I can respond appropriately.\n\nThe next step is always risk containment. If payroll is at risk, I work quickly to implement a temporary workaround to ensure employees are not affected while we develop the permanent solution. I firmly believe that business continuity and protecting employees' livelihoods must always come first.\n\nThroughout this process, I maintain very transparent communication with all stakeholders. I inform them honestly about what has happened, what actions we are taking, and when they can expect the next update. I've learned that it's far better to be transparent about challenges than to hide issues or provide unrealistic timelines—that only erodes trust.\n\nOnce the immediate issue is stabilized, I shift my focus to understanding the root cause. I carefully review the process, strengthen our validations, and tighten controls to ensure that the same escalation doesn't happen again. I see each escalation as a learning opportunity to improve our systems and processes.\n\nExample: If I may share a brief example—in one project, just before go-live, the client escalated that salary outputs weren't matching their legacy system. Rather than becoming defensive, I immediately paused the payroll run and personally pulled both data sets to perform a detailed row-level reconciliation.\n\nI discovered that a regional allowance had been mapped differently in the new system. I quickly implemented a calculation adjustment for that current cycle to protect employee payments, communicated the issue and solution transparently to the client, and then worked to update the configuration and validation logic permanently for future cycles.\n\nI'm grateful to say that payroll went live on time, and the client later shared that they truly appreciated how we handled the escalation with honesty and speed.\n\nIn summary, I approach escalations with ownership, structure, transparency, and a commitment to permanent resolution—never with panic or blame.",
+            keyTakeaways: [
+                "Take full ownership immediately",
+                "Focus on risk containment first",
+                "Transparent communication with stakeholders",
+                "Root cause analysis and prevention",
+                "Turn escalations into learning opportunities"
+            ]
+        },
+
+        {
+            id: 3,
+            question: "How do you deal with tough clients?",
+            category: "behavioral",
+            difficulty: "hard",
+            company: "general",
+            interviewRound: "all",
+            keywords: ["difficult-clients", "empathy", "client-management", "patience"],
+            estimatedReadTime: 3,
+            tags: ["client-relationships", "communication-skills", "emotional-intelligence"],
+            importance: "high",
+            answer: "Thank you for asking. This is something I've given a lot of thought to over the years.\n\nI've learned that when dealing with what might seem like a \"tough\" client, it's important to first understand the reason behind their behavior rather than simply reacting to it. In my experience, most client frustration comes from real pressure they're facing—tight timelines, high stakes, or perhaps previous negative experiences with other vendors. Once I remind myself of that, it becomes much easier to respond with empathy rather than defensiveness.\n\nMy approach is to always remain calm and professional, listen very carefully without interrupting, and genuinely acknowledge their concerns so they feel heard and respected. I've found that once the initial tension is addressed, I can gently bring the conversation back to facts—what exactly happened, what the impact is, and what our clear resolution plan looks like.\n\nI focus on providing very specific timelines, transparent and frequent updates, and delivering quick, visible progress wherever possible. Even a small early win can help rebuild confidence and show that we're committed to their success.\n\nMy goal is never to \"win the argument\" or prove I'm right. My goal is to earn back the client's trust through consistency, reliable delivery, and genuine accountability. I've been fortunate to see that, over time, many of the clients who started out as the most challenging actually became our strongest and most loyal long-term partners.\n\nExample: If I may share an example—in one global payroll implementation, I worked with a client who was understandably very cautious and sometimes quite direct due to multiple missed deadlines from their previous vendor. They often started our calls already in an escalated mindset.\n\nInstead of taking it personally or reacting defensively, I acknowledged their past difficulties, explained each step of our implementation process in very simple and transparent terms, and began sending brief weekly status updates that clearly outlined milestones, progress, and any potential risks.\n\nI also provided them with early payroll preview reports before each actual payroll run, which gave them much more visibility and control. I'm very pleased to say that within just two payroll cycles, their entire tone changed. They became one of our most cooperative and collaborative clients, and they've even referred other organizations to us since then.\n\nSo in short, I deal with tough clients by leading with empathy, staying calm and transparent, delivering consistent results, and always remembering that their frustration usually comes from a place of genuine concern—not personal animosity.",
+            keyTakeaways: [
+                "Understand the root cause of frustration",
+                "Lead with empathy and active listening",
+                "Provide transparent, frequent updates",
+                "Deliver small wins to rebuild trust",
+                "Turn challenging clients into loyal partners"
+            ]
+        }
+    ]
+};
+
+// Export for use in other modules
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = ALL_QUESTIONS;
+}

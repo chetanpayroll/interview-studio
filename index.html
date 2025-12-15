@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
 
     <!-- Primary Meta Tags -->
     <title>Interview Studio | Global Payroll Implementation Consultant</title>
     <meta name="title" content="Interview Studio | Global Payroll Implementation Consultant">
-    <meta name="description" content="Professional interview preparation for Global Payroll Implementation Consultants. 13+ years experience, 1,500+ payroll cycles, 25+ countries. Expert answers to common interview questions.">
-    <meta name="keywords" content="payroll, implementation, consultant, interview, global payroll, APAC, EMEA, LATAM, interview preparation, payroll expert">
+    <meta name="description"
+        content="Professional interview preparation for Global Payroll Implementation Consultants. 13+ years experience, 1,500+ payroll cycles, 25+ countries. Expert answers to common interview questions.">
+    <meta name="keywords"
+        content="payroll, implementation, consultant, interview, global payroll, APAC, EMEA, LATAM, interview preparation, payroll expert">
     <meta name="author" content="GMP Payroll">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -17,14 +21,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://interview-studio.gmppayroll.com/">
     <meta property="og:title" content="Interview Studio | Global Payroll Implementation Consultant">
-    <meta property="og:description" content="Professional interview preparation for Global Payroll Implementation Consultants. Expert answers backed by 13+ years of experience.">
+    <meta property="og:description"
+        content="Professional interview preparation for Global Payroll Implementation Consultants. Expert answers backed by 13+ years of experience.">
     <meta property="og:image" content="/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://interview-studio.gmppayroll.com/">
     <meta property="twitter:title" content="Interview Studio | Global Payroll Implementation Consultant">
-    <meta property="twitter:description" content="Professional interview preparation for Global Payroll Implementation Consultants. Expert answers backed by 13+ years of experience.">
+    <meta property="twitter:description"
+        content="Professional interview preparation for Global Payroll Implementation Consultants. Expert answers backed by 13+ years of experience.">
     <meta property="twitter:image" content="/og-image.png">
 
     <!-- PWA Meta Tags -->
@@ -45,10 +51,13 @@
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="enhanced-styles.css">
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -74,6 +83,7 @@
     }
     </script>
 </head>
+
 <body>
     <canvas id="bg-canvas"></canvas>
 
@@ -81,7 +91,8 @@
     <!-- THEME TOGGLE & MOBILE CONTROLS -->
     <!-- ============================================ -->
     <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -92,7 +103,8 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
-        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
     </div>
@@ -175,8 +187,78 @@
                 <p class="section-description">Real responses from a proven Global Payroll Implementation Consultant</p>
             </div>
 
-            <div class="interview-questions">
-                
+            <!-- ========== ENHANCED CONTROL PANEL ========== -->
+            <div class="control-panel glass-card">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input"
+                        placeholder="🔍 Search questions, keywords, or content...">
+                </div>
+
+                <!-- Filters Row -->
+                <div class="filters-row">
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="behavioral">💬 Behavioral</option>
+                        <option value="technical">⚙️ Technical</option>
+                        <option value="scenario">🎯 Scenario</option>
+                        <option value="rippling-specific">🟣 Rippling-Specific</option>
+                    </select>
+
+                    <select id="difficulty-filter" class="filter-select">
+                        <option value="all">All Difficulties</option>
+                        <option value="easy">🟢 Easy</option>
+                        <option value="medium">🟡 Medium</option>
+                        <option value="hard">🔴 Hard</option>
+                    </select>
+
+                    <select id="company-filter" class="filter-select">
+                        <option value="all">All Companies</option>
+                        <option value="general">🌍 General</option>
+                        <option value="deel">🔵 Deel</option>
+                        <option value="rippling">🟣 Rippling</option>
+                    </select>
+
+                    <label class="favorites-toggle-label">
+                        <input type="checkbox" id="favorites-toggle">
+                        <span>⭐ Favorites Only</span>
+                    </label>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-value" id="total-questions">26</div>
+                        <div class="stat-label">Total Questions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="viewed-count">0</div>
+                        <div class="stat-label">Viewed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="favorites-count">0</div>
+                        <div class="stat-label">Favorites</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="notes-count">0</div>
+                        <div class="stat-label">Notes</div>
+                    </div>
+                </div>
+
+                <!-- Export Buttons -->
+                <div class="export-row">
+                    <button class="export-btn" data-export="txt">📄 Export TXT</button>
+                    <button class="export-btn" data-export="md">📝 Export Markdown</button>
+                    <button class="export-btn" data-export="json">📊 Export JSON</button>
+                    <button class="export-btn" data-export="pdf">📕 Export PDF</button>
+                </div>
+
+                <!-- Results Count -->
+                <div class="results-count" id="results-count">Showing 26 of 26 questions</div>
+            </div>
+
+            <div class="interview-questions" id="questions-container">
+
                 <!-- Question 1 -->
                 <div class="interview-card glass-card" data-question="1">
                     <div class="question-header" onclick="toggleAnswer(1)">
@@ -185,24 +267,57 @@
                             <h3 class="question-text">Tell me about yourself introduction?</h3>
                         </div>
                         <div class="expand-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 9l6 6 6-6"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
                             </svg>
                         </div>
                     </div>
                     <div class="answer-content" id="answer-1">
                         <div class="answer-text">
-                            <p>Thank you very much for your time today. I truly appreciate this opportunity to speak with you.</p>
-                            <p>I am a Global Payroll Implementation Consultant with over 13 years of experience supporting organizations with complex, multi-country payroll operations and system implementations. Over the years, I have been fortunate to work closely with diverse clients and global teams, and I consider those learning experiences a true privilege.</p>
-                            <p>Currently, I work with Deel, where I lead and support end-to-end payroll implementations across multiple countries in the APAC and EMEA regions. Over the last four years, I have received five promotions, which I see as a reflection of the trust, encouragement, and support I've received from my clients, colleagues, and leadership. I'm truly grateful for that confidence.</p>
-                            <p>Throughout my career, I have been directly involved in more than 1,500 complete payroll cycles with a 99% accuracy rate. This includes end-to-end payroll implementation—from kickoff and discovery calls through client setup, employee onboarding, system configuration, parallel runs, go-live support, and ongoing operations. Before transitioning to implementation consulting, I also handled complete payroll processing operations for Hong Kong, Singapore, and the UAE, which gave me strong operational foundations. I have comprehensive hands-on experience with statutory compliance in Hong Kong, Singapore, and the UAE, including tax regulations, social security contributions, and mandatory benefits compliance.</p>
-                            <p>More recently, I have had the opportunity to lead complex migrations from legacy payroll platforms to Deel's global payroll solution. In these projects, I worked closely with clients, internal stakeholders, and external vendors to ensure smooth and carefully planned transitions with minimal disruption to day-to-day payroll operations, which is always a top priority for clients.</p>
-                            <p>Alongside implementation and processing, I also enjoy adding value through automation and data visibility. I've built automation solutions using Google Apps Script and VBA that have reduced manual validation time by approximately 60%, creating more efficient and error-free environments. I've also developed real-time dashboards for implementation tracking, risk visibility, and service comparison, helping leadership make faster and better-informed decisions.</p>
-                            <p>At this stage of my career, I am keen to contribute at a more strategic level—working on larger and more complex global implementations, supporting payroll operations at scale, mentoring team members, and helping shape how global payroll solutions are delivered and continuously improved.</p>
-                            <p>That is what truly motivates me, and it's why I'm genuinely excited and honored to be exploring this opportunity with you. Thank you once again for your time and consideration.</p>
+                            <p>Thank you very much for your time today. I truly appreciate this opportunity to speak
+                                with you.</p>
+                            <p>I am a Global Payroll Implementation Consultant with over 13 years of experience
+                                supporting organizations with complex, multi-country payroll operations and system
+                                implementations. Over the years, I have been fortunate to work closely with diverse
+                                clients and global teams, and I consider those learning experiences a true privilege.
+                            </p>
+                            <p>Currently, I work with Deel, where I lead and support end-to-end payroll implementations
+                                across multiple countries in the APAC and EMEA regions. Over the last four years, I have
+                                received five promotions, which I see as a reflection of the trust, encouragement, and
+                                support I've received from my clients, colleagues, and leadership. I'm truly grateful
+                                for that confidence.</p>
+                            <p>Throughout my career, I have been directly involved in more than 1,500 complete payroll
+                                cycles with a 99% accuracy rate. This includes end-to-end payroll implementation—from
+                                kickoff and discovery calls through client setup, employee onboarding, system
+                                configuration, parallel runs, go-live support, and ongoing operations. Before
+                                transitioning to implementation consulting, I also handled complete payroll processing
+                                operations for Hong Kong, Singapore, and the UAE, which gave me strong operational
+                                foundations. I have comprehensive hands-on experience with statutory compliance in Hong
+                                Kong, Singapore, and the UAE, including tax regulations, social security contributions,
+                                and mandatory benefits compliance.</p>
+                            <p>More recently, I have had the opportunity to lead complex migrations from legacy payroll
+                                platforms to Deel's global payroll solution. In these projects, I worked closely with
+                                clients, internal stakeholders, and external vendors to ensure smooth and carefully
+                                planned transitions with minimal disruption to day-to-day payroll operations, which is
+                                always a top priority for clients.</p>
+                            <p>Alongside implementation and processing, I also enjoy adding value through automation and
+                                data visibility. I've built automation solutions using Google Apps Script and VBA that
+                                have reduced manual validation time by approximately 60%, creating more efficient and
+                                error-free environments. I've also developed real-time dashboards for implementation
+                                tracking, risk visibility, and service comparison, helping leadership make faster and
+                                better-informed decisions.</p>
+                            <p>At this stage of my career, I am keen to contribute at a more strategic level—working on
+                                larger and more complex global implementations, supporting payroll operations at scale,
+                                mentoring team members, and helping shape how global payroll solutions are delivered and
+                                continuously improved.</p>
+                            <p>That is what truly motivates me, and it's why I'm genuinely excited and honored to be
+                                exploring this opportunity with you. Thank you once again for your time and
+                                consideration.</p>
                         </div>
                         <button class="copy-btn" onclick="copyAnswer(1)">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                             </svg>
@@ -219,26 +334,55 @@
                             <h3 class="question-text">How do you deal with escalations?</h3>
                         </div>
                         <div class="expand-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 9l6 6 6-6"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
                             </svg>
                         </div>
                     </div>
                     <div class="answer-content" id="answer-2">
                         <div class="answer-text">
-                            <p>Thank you for this important question. I truly believe that escalations are an opportunity to demonstrate accountability and problem-solving, rather than something to fear.</p>
-                            <p>When an escalation occurs, my first priority is to remain calm and take full ownership of the situation—even if the issue wasn't directly caused by me or my team. I've learned that clients need to see someone stepping forward with responsibility, and I'm honored to be in a position where I can do that.</p>
-                            <p>I immediately focus on understanding the real impact. I ask myself: does this affect payroll processing, statutory compliance, or employee payments? I ask very clear and respectful questions to identify exactly what happened, when it occurred, and who is impacted, so I can respond appropriately.</p>
-                            <p>The next step is always risk containment. If payroll is at risk, I work quickly to implement a temporary workaround to ensure employees are not affected while we develop the permanent solution. I firmly believe that business continuity and protecting employees' livelihoods must always come first.</p>
-                            <p>Throughout this process, I maintain very transparent communication with all stakeholders. I inform them honestly about what has happened, what actions we are taking, and when they can expect the next update. I've learned that it's far better to be transparent about challenges than to hide issues or provide unrealistic timelines—that only erodes trust.</p>
-                            <p>Once the immediate issue is stabilized, I shift my focus to understanding the root cause. I carefully review the process, strengthen our validations, and tighten controls to ensure that the same escalation doesn't happen again. I see each escalation as a learning opportunity to improve our systems and processes.</p>
-                            <p><strong>Example:</strong> If I may share a brief example—in one project, just before go-live, the client escalated that salary outputs weren't matching their legacy system. Rather than becoming defensive, I immediately paused the payroll run and personally pulled both data sets to perform a detailed row-level reconciliation.</p>
-                            <p>I discovered that a regional allowance had been mapped differently in the new system. I quickly implemented a calculation adjustment for that current cycle to protect employee payments, communicated the issue and solution transparently to the client, and then worked to update the configuration and validation logic permanently for future cycles.</p>
-                            <p>I'm grateful to say that payroll went live on time, and the client later shared that they truly appreciated how we handled the escalation with honesty and speed.</p>
-                            <p>In summary, I approach escalations with ownership, structure, transparency, and a commitment to permanent resolution—never with panic or blame.</p>
+                            <p>Thank you for this important question. I truly believe that escalations are an
+                                opportunity to demonstrate accountability and problem-solving, rather than something to
+                                fear.</p>
+                            <p>When an escalation occurs, my first priority is to remain calm and take full ownership of
+                                the situation—even if the issue wasn't directly caused by me or my team. I've learned
+                                that clients need to see someone stepping forward with responsibility, and I'm honored
+                                to be in a position where I can do that.</p>
+                            <p>I immediately focus on understanding the real impact. I ask myself: does this affect
+                                payroll processing, statutory compliance, or employee payments? I ask very clear and
+                                respectful questions to identify exactly what happened, when it occurred, and who is
+                                impacted, so I can respond appropriately.</p>
+                            <p>The next step is always risk containment. If payroll is at risk, I work quickly to
+                                implement a temporary workaround to ensure employees are not affected while we develop
+                                the permanent solution. I firmly believe that business continuity and protecting
+                                employees' livelihoods must always come first.</p>
+                            <p>Throughout this process, I maintain very transparent communication with all stakeholders.
+                                I inform them honestly about what has happened, what actions we are taking, and when
+                                they can expect the next update. I've learned that it's far better to be transparent
+                                about challenges than to hide issues or provide unrealistic timelines—that only erodes
+                                trust.</p>
+                            <p>Once the immediate issue is stabilized, I shift my focus to understanding the root cause.
+                                I carefully review the process, strengthen our validations, and tighten controls to
+                                ensure that the same escalation doesn't happen again. I see each escalation as a
+                                learning opportunity to improve our systems and processes.</p>
+                            <p><strong>Example:</strong> If I may share a brief example—in one project, just before
+                                go-live, the client escalated that salary outputs weren't matching their legacy system.
+                                Rather than becoming defensive, I immediately paused the payroll run and personally
+                                pulled both data sets to perform a detailed row-level reconciliation.</p>
+                            <p>I discovered that a regional allowance had been mapped differently in the new system. I
+                                quickly implemented a calculation adjustment for that current cycle to protect employee
+                                payments, communicated the issue and solution transparently to the client, and then
+                                worked to update the configuration and validation logic permanently for future cycles.
+                            </p>
+                            <p>I'm grateful to say that payroll went live on time, and the client later shared that they
+                                truly appreciated how we handled the escalation with honesty and speed.</p>
+                            <p>In summary, I approach escalations with ownership, structure, transparency, and a
+                                commitment to permanent resolution—never with panic or blame.</p>
                         </div>
                         <button class="copy-btn" onclick="copyAnswer(2)">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                             </svg>
@@ -255,25 +399,54 @@
                             <h3 class="question-text">How do you deal with tough clients?</h3>
                         </div>
                         <div class="expand-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 9l6 6 6-6"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
                             </svg>
                         </div>
                     </div>
                     <div class="answer-content" id="answer-3">
                         <div class="answer-text">
-                            <p>Thank you for asking. This is something I've given a lot of thought to over the years.</p>
-                            <p>I've learned that when dealing with what might seem like a "tough" client, it's important to first understand the reason behind their behavior rather than simply reacting to it. In my experience, most client frustration comes from real pressure they're facing—tight timelines, high stakes, or perhaps previous negative experiences with other vendors. Once I remind myself of that, it becomes much easier to respond with empathy rather than defensiveness.</p>
-                            <p>My approach is to always remain calm and professional, listen very carefully without interrupting, and genuinely acknowledge their concerns so they feel heard and respected. I've found that once the initial tension is addressed, I can gently bring the conversation back to facts—what exactly happened, what the impact is, and what our clear resolution plan looks like.</p>
-                            <p>I focus on providing very specific timelines, transparent and frequent updates, and delivering quick, visible progress wherever possible. Even a small early win can help rebuild confidence and show that we're committed to their success.</p>
-                            <p>My goal is never to "win the argument" or prove I'm right. My goal is to earn back the client's trust through consistency, reliable delivery, and genuine accountability. I've been fortunate to see that, over time, many of the clients who started out as the most challenging actually became our strongest and most loyal long-term partners.</p>
-                            <p><strong>Example:</strong> If I may share an example—in one global payroll implementation, I worked with a client who was understandably very cautious and sometimes quite direct due to multiple missed deadlines from their previous vendor. They often started our calls already in an escalated mindset.</p>
-                            <p>Instead of taking it personally or reacting defensively, I acknowledged their past difficulties, explained each step of our implementation process in very simple and transparent terms, and began sending brief weekly status updates that clearly outlined milestones, progress, and any potential risks.</p>
-                            <p>I also provided them with early payroll preview reports before each actual payroll run, which gave them much more visibility and control. I'm very pleased to say that within just two payroll cycles, their entire tone changed. They became one of our most cooperative and collaborative clients, and they've even referred other organizations to us since then.</p>
-                            <p>So in short, I deal with tough clients by leading with empathy, staying calm and transparent, delivering consistent results, and always remembering that their frustration usually comes from a place of genuine concern—not personal animosity.</p>
+                            <p>Thank you for asking. This is something I've given a lot of thought to over the years.
+                            </p>
+                            <p>I've learned that when dealing with what might seem like a "tough" client, it's important
+                                to first understand the reason behind their behavior rather than simply reacting to it.
+                                In my experience, most client frustration comes from real pressure they're facing—tight
+                                timelines, high stakes, or perhaps previous negative experiences with other vendors.
+                                Once I remind myself of that, it becomes much easier to respond with empathy rather than
+                                defensiveness.</p>
+                            <p>My approach is to always remain calm and professional, listen very carefully without
+                                interrupting, and genuinely acknowledge their concerns so they feel heard and respected.
+                                I've found that once the initial tension is addressed, I can gently bring the
+                                conversation back to facts—what exactly happened, what the impact is, and what our clear
+                                resolution plan looks like.</p>
+                            <p>I focus on providing very specific timelines, transparent and frequent updates, and
+                                delivering quick, visible progress wherever possible. Even a small early win can help
+                                rebuild confidence and show that we're committed to their success.</p>
+                            <p>My goal is never to "win the argument" or prove I'm right. My goal is to earn back the
+                                client's trust through consistency, reliable delivery, and genuine accountability. I've
+                                been fortunate to see that, over time, many of the clients who started out as the most
+                                challenging actually became our strongest and most loyal long-term partners.</p>
+                            <p><strong>Example:</strong> If I may share an example—in one global payroll implementation,
+                                I worked with a client who was understandably very cautious and sometimes quite direct
+                                due to multiple missed deadlines from their previous vendor. They often started our
+                                calls already in an escalated mindset.</p>
+                            <p>Instead of taking it personally or reacting defensively, I acknowledged their past
+                                difficulties, explained each step of our implementation process in very simple and
+                                transparent terms, and began sending brief weekly status updates that clearly outlined
+                                milestones, progress, and any potential risks.</p>
+                            <p>I also provided them with early payroll preview reports before each actual payroll run,
+                                which gave them much more visibility and control. I'm very pleased to say that within
+                                just two payroll cycles, their entire tone changed. They became one of our most
+                                cooperative and collaborative clients, and they've even referred other organizations to
+                                us since then.</p>
+                            <p>So in short, I deal with tough clients by leading with empathy, staying calm and
+                                transparent, delivering consistent results, and always remembering that their
+                                frustration usually comes from a place of genuine concern—not personal animosity.</p>
                         </div>
                         <button class="copy-btn" onclick="copyAnswer(3)">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                             </svg>
@@ -301,7 +474,8 @@
                     <div class="timeline-content glass-card">
                         <span class="timeline-year">2024-2025</span>
                         <h3>Senior Implementation Consultant</h3>
-                        <p>Leading complex PY360 to Deel migrations across Egypt, Israel, and Hong Kong with enterprise clients</p>
+                        <p>Leading complex PY360 to Deel migrations across Egypt, Israel, and Hong Kong with enterprise
+                            clients</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -309,7 +483,8 @@
                     <div class="timeline-content glass-card">
                         <span class="timeline-year">2021-2024</span>
                         <h3>5 Promotions at Deel</h3>
-                        <p>Rapid career progression through consistent delivery excellence and client satisfaction across APAC & EMEA</p>
+                        <p>Rapid career progression through consistent delivery excellence and client satisfaction
+                            across APAC & EMEA</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -317,7 +492,8 @@
                     <div class="timeline-content glass-card">
                         <span class="timeline-year">2018-2021</span>
                         <h3>Multi-Country Payroll Operations</h3>
-                        <p>Managed complete payroll processing for Hong Kong, Singapore, and UAE with full statutory compliance</p>
+                        <p>Managed complete payroll processing for Hong Kong, Singapore, and UAE with full statutory
+                            compliance</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -325,7 +501,8 @@
                     <div class="timeline-content glass-card">
                         <span class="timeline-year">2012-2018</span>
                         <h3>Foundation Years</h3>
-                        <p>Built expertise in payroll systems, compliance frameworks, and implementation methodologies</p>
+                        <p>Built expertise in payroll systems, compliance frameworks, and implementation methodologies
+                        </p>
                     </div>
                 </div>
             </div>
@@ -418,6 +595,9 @@
     <!-- Main Script -->
     <script src="script.js"></script>
 
+    <!-- Enhanced Engine (Phase 2 & 3 Features) -->
+    <script src="enhanced-engine.js"></script>
+
     <!-- PWA Registration -->
     <script>
         // Register Service Worker for PWA functionality
@@ -484,4 +664,5 @@
         });
     </script>
 </body>
+
 </html>
