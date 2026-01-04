@@ -71,3 +71,32 @@
     color: var(--text-main);
     font-weight: 600;
 }
+
+/* ============================================ */
+/* IOS / MOBILE SPECIFIC OPTIMIZATIONS */
+/* ============================================ */
+@media (max-width: 768px) {
+
+    .answer-list,
+    .answer-list-ordered {
+        margin-left: 0.5rem;
+        /* Reduce left margin on mobile */
+        padding-left: 0.5rem;
+    }
+
+    .answer-list-ordered {
+        margin-left: 1rem;
+        /* Adjust for numbers */
+    }
+
+    .answer-text p {
+        font-size: 1.05rem;
+        /* Slightly larger text for mobile readability */
+        line-height: 1.6;
+    }
+
+    .answer-text h4 {
+        margin-top: 1.5rem;
+        font-size: 1.05rem;
+    }
+}
