@@ -231,12 +231,12 @@ function toggleAnswer(questionNumber) {
 function copyAnswer(questionNumber) {
     const answerElement = document.querySelector(`#answer-${questionNumber} .answer-text`);
     const button = document.querySelector(`#answer-${questionNumber} .copy-btn`);
-    
+
     if (!answerElement || !button) return;
-    
+
     // Get the text content
     const textToCopy = answerElement.innerText;
-    
+
     // Copy to clipboard
     navigator.clipboard.writeText(textToCopy).then(() => {
         // Visual feedback
@@ -248,7 +248,7 @@ function copyAnswer(questionNumber) {
             </svg>
             Copied!
         `;
-        
+
         // Reset after 2 seconds
         setTimeout(() => {
             button.classList.remove('copied');
@@ -268,7 +268,7 @@ function initScrollAnimations() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -278,7 +278,7 @@ function initScrollAnimations() {
             }
         });
     }, observerOptions);
-    
+
     // Observe all cards and sections
     const elementsToAnimate = document.querySelectorAll(`
         .profile-card,
@@ -287,7 +287,7 @@ function initScrollAnimations() {
         .tool-card,
         .cta-content
     `);
-    
+
     elementsToAnimate.forEach((el, index) => {
         el.classList.add('animate-on-scroll');
         el.style.transitionDelay = `${index * 0.1}s`;
@@ -300,21 +300,21 @@ function initScrollAnimations() {
 /* ============================================ */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            
+
             // Skip if href is just "#"
             if (href === '#') {
                 e.preventDefault();
                 return;
             }
-            
+
             const targetElement = document.querySelector(href);
-            
+
             if (targetElement) {
                 e.preventDefault();
                 const offsetTop = targetElement.offsetTop - 80;
-                
+
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -329,13 +329,13 @@ function initSmoothScroll() {
 /* ============================================ */
 function initParallax() {
     const heroBackground = document.querySelector('.hero-background');
-    
+
     if (!heroBackground) return;
-    
+
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const rate = scrolled * 0.5;
-        
+
         if (scrolled < window.innerHeight) {
             heroBackground.style.transform = `translate3d(0, ${rate}px, 0)`;
         }
@@ -347,19 +347,19 @@ function initParallax() {
 /* ============================================ */
 function initNavbarScroll() {
     let lastScroll = 0;
-    
+
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
         const navbar = document.querySelector('.navbar');
-        
+
         if (!navbar) return;
-        
+
         if (currentScroll > 100) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-        
+
         lastScroll = currentScroll;
     });
 }
@@ -369,15 +369,15 @@ function initNavbarScroll() {
 /* ============================================ */
 function initTypingEffect() {
     const typingElements = document.querySelectorAll('[data-typing]');
-    
+
     typingElements.forEach(element => {
         const text = element.textContent;
         element.textContent = '';
         element.style.opacity = '1';
-        
+
         let index = 0;
         const speed = 50;
-        
+
         function type() {
             if (index < text.length) {
                 element.textContent += text.charAt(index);
@@ -385,7 +385,7 @@ function initTypingEffect() {
                 setTimeout(type, speed);
             }
         }
-        
+
         // Start typing after a delay
         setTimeout(type, 500);
     });
@@ -394,28 +394,12 @@ function initTypingEffect() {
 /* ============================================ */
 /* CARD HOVER 3D EFFECT */
 /* ============================================ */
+/* ============================================ */
+/* CARD HOVER EFFECT - SIMPLIFIED */
+/* ============================================ */
 function init3DCardEffect() {
-    const cards = document.querySelectorAll('.glass-card');
-    
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 20;
-            const rotateY = (centerX - x) / 20;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-        });
-    });
+    // 3D Tilt effect removed for simpler interaction
+    // Retaining basic hover effect via CSS
 }
 
 /* ============================================ */
@@ -424,7 +408,7 @@ function init3DCardEffect() {
 function initLoadingAnimation() {
     // Add loading class to body
     document.body.classList.add('loading');
-    
+
     // Remove loading class after page load
     window.addEventListener('load', () => {
         setTimeout(() => {
@@ -450,7 +434,7 @@ function initScrollProgress() {
         transition: width 0.1s ease;
     `;
     document.body.appendChild(progressBar);
-    
+
     window.addEventListener('scroll', () => {
         const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (window.pageYOffset / windowHeight) * 100;
@@ -464,14 +448,14 @@ function initScrollProgress() {
 function initKeyboardNavigation() {
     let currentCardIndex = -1;
     const cards = Array.from(document.querySelectorAll('.interview-card'));
-    
+
     document.addEventListener('keydown', (e) => {
         // Only activate keyboard navigation if no input is focused
-        if (document.activeElement.tagName === 'INPUT' || 
+        if (document.activeElement.tagName === 'INPUT' ||
             document.activeElement.tagName === 'TEXTAREA') {
             return;
         }
-        
+
         if (e.key === 'ArrowDown') {
             e.preventDefault();
             currentCardIndex = Math.min(currentCardIndex + 1, cards.length - 1);
@@ -497,15 +481,15 @@ function initKeyboardNavigation() {
 function initMobileMenu() {
     const menuButton = document.querySelector('.mobile-menu-btn');
     const menu = document.querySelector('.mobile-menu');
-    
+
     if (!menuButton || !menu) return;
-    
+
     menuButton.addEventListener('click', () => {
         menu.classList.toggle('active');
         menuButton.classList.toggle('active');
         document.body.classList.toggle('no-scroll');
     });
-    
+
     // Close menu when clicking on a link
     menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
@@ -708,7 +692,7 @@ const konamiPattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLef
 document.addEventListener('keydown', (e) => {
     konamiCode.push(e.key);
     konamiCode = konamiCode.slice(-10);
-    
+
     if (konamiCode.join('') === konamiPattern.join('')) {
         activateSpecialMode();
     }
@@ -717,10 +701,10 @@ document.addEventListener('keydown', (e) => {
 function activateSpecialMode() {
     // Add special visual effects
     document.body.style.animation = 'rainbow 5s linear infinite';
-    
+
     // Create confetti effect
     createConfetti();
-    
+
     // Show achievement message
     showAchievement('🎉 Premium Mode Activated!');
 }
@@ -728,7 +712,7 @@ function activateSpecialMode() {
 function createConfetti() {
     const colors = ['#6366f1', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b'];
     const confettiCount = 50;
-    
+
     for (let i = 0; i < confettiCount; i++) {
         const confetti = document.createElement('div');
         confetti.style.cssText = `
@@ -745,7 +729,7 @@ function createConfetti() {
             z-index: 10000;
         `;
         document.body.appendChild(confetti);
-        
+
         setTimeout(() => confetti.remove(), 5000);
     }
 }
@@ -769,7 +753,7 @@ function showAchievement(message) {
         animation: achievementPop 3s ease forwards;
     `;
     document.body.appendChild(achievement);
-    
+
     setTimeout(() => achievement.remove(), 3000);
 }
 
@@ -828,7 +812,7 @@ function debounce(func, wait) {
 // Throttle function for scroll events
 function throttle(func, limit) {
     let inThrottle;
-    return function(...args) {
+    return function (...args) {
         if (!inThrottle) {
             func.apply(this, args);
             inThrottle = true;
@@ -843,7 +827,7 @@ function throttle(func, limit) {
 function trackEvent(category, action, label) {
     // Placeholder for analytics tracking
     console.log('Event tracked:', { category, action, label });
-    
+
     // Example: Google Analytics
     // if (typeof gtag !== 'undefined') {
     //     gtag('event', action, {
@@ -860,7 +844,7 @@ document.addEventListener('click', (e) => {
         const questionNumber = card.getAttribute('data-question');
         trackEvent('Interview', 'Question Expanded', `Question ${questionNumber}`);
     }
-    
+
     if (e.target.closest('.copy-btn')) {
         const answerContent = e.target.closest('.answer-content');
         const questionNumber = answerContent.id.split('-')[1];
@@ -894,7 +878,7 @@ function initAccessibility() {
         skipLink.style.top = '-40px';
     });
     document.body.insertBefore(skipLink, document.body.firstChild);
-    
+
     // Add ARIA labels to interactive elements
     document.querySelectorAll('.interview-card').forEach((card, index) => {
         const header = card.querySelector('.question-header');
@@ -902,14 +886,14 @@ function initAccessibility() {
         header.setAttribute('aria-expanded', 'false');
         header.setAttribute('aria-label', `Expand answer for question ${index + 1}`);
         header.setAttribute('tabindex', '0');
-        
+
         // Add keyboard support
         header.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 const questionNumber = card.getAttribute('data-question');
                 toggleAnswer(parseInt(questionNumber));
-                
+
                 const isExpanded = card.classList.contains('active');
                 header.setAttribute('aria-expanded', isExpanded);
             }
@@ -937,22 +921,22 @@ const CanvasAnimation = {
     init() {
         this.canvas = document.getElementById('bg-canvas');
         if (!this.canvas) return;
-        
+
         this.ctx = this.canvas.getContext('2d');
         this.resize();
         this.particles = [];
         this.createParticles();
         this.animate();
-        
+
         window.addEventListener('resize', () => this.resize());
         window.addEventListener('mousemove', (e) => this.handleMouseMove(e));
     },
-    
+
     resize() {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
     },
-    
+
     createParticles() {
         const particleCount = Math.min(window.innerWidth / 10, 100); // Responsive count
         for (let i = 0; i < particleCount; i++) {
@@ -966,40 +950,40 @@ const CanvasAnimation = {
             });
         }
     },
-    
+
     handleMouseMove(e) {
         // Gentle repulsion or attraction could go here
         // For now, let's just make particles near mouse slightly larger
         this.mouseX = e.clientX;
         this.mouseY = e.clientY;
     },
-    
+
     animate() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        
+
         this.particles.forEach((p, index) => {
             // Update position
             p.x += p.vx;
             p.y += p.vy;
-            
+
             // Bounce off walls
             if (p.x < 0 || p.x > this.canvas.width) p.vx *= -1;
             if (p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
-            
+
             // Draw particle
             this.ctx.beginPath();
             this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
             this.ctx.fillStyle = p.color;
             this.ctx.globalAlpha = 0.5;
             this.ctx.fill();
-            
+
             // Connect particles
             for (let j = index + 1; j < this.particles.length; j++) {
                 const p2 = this.particles[j];
                 const dx = p.x - p2.x;
                 const dy = p.y - p2.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
-                
+
                 if (distance < 150) {
                     this.ctx.beginPath();
                     this.ctx.strokeStyle = `rgba(148, 163, 184, ${0.1 * (1 - distance / 150)})`;
@@ -1010,7 +994,7 @@ const CanvasAnimation = {
                 }
             }
         });
-        
+
         requestAnimationFrame(() => this.animate());
     }
 };

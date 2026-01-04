@@ -1,0 +1,73 @@
+/* ============================================ */
+/* BETTER ANSWER FORMATTING */
+/* ============================================ */
+
+/* Lists Style in Answers */
+.answer-list,
+.answer-list-ordered {
+    margin: 1.25rem 0 1.25rem 1.5rem;
+    padding-left: 1rem;
+    color: var(--text-muted);
+}
+
+.answer-list li,
+.answer-list-ordered li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+/* Bullet for Unordered List */
+.answer-list {
+    list-style: none;
+}
+
+.answer-list li::before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: -1.2rem;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Ordered List */
+.answer-list-ordered {
+    list-style-type: decimal;
+    margin-left: 2rem;
+}
+
+/* Headings inside Answers */
+.answer-text h4 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Add a small accent line to headings in answers */
+.answer-text h4::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1.1rem;
+    background: var(--secondary);
+    border-radius: 2px;
+}
+
+/* Paragraph spacing */
+.answer-text p {
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+    /* Improved readability */
+}
+
+/* Strong text emphasis */
+.answer-text strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
