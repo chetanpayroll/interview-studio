@@ -716,12 +716,20 @@ p {
         left: -5px;
     }
 
-    /* Improved Touch Feedback */
+    /* Improved Touch Feedback - No Motion/Hover Stickiness */
+    .glass-card:hover {
+        transform: none !important;
+        box-shadow: var(--shadow-glass) !important;
+        background: var(--bg-glass) !important;
+        border-color: var(--border-glass) !important;
+    }
+
     .glass-card:active,
     .btn-primary:active,
     .btn-secondary:active,
     .copy-btn:active {
-        transform: scale(0.98);
+        /* Subtle scale only on active press, removed hover movements */
+        transform: scale(0.99);
         transition: transform 0.1s;
     }
 
