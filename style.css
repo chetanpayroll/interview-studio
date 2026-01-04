@@ -107,12 +107,14 @@ h1 {
     font-weight: 700;
     background: linear-gradient(to right, #fff, #94a3b8);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 [data-theme="light"] h1 {
     background: linear-gradient(to right, #0f172a, #475569);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -132,8 +134,8 @@ p {
 /* ============================================ */
 .glass-card {
     background: var(--bg-glass);
-    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     border: 1px solid var(--border-glass);
     border-radius: 24px;
     padding: var(--space-md);
@@ -179,6 +181,7 @@ p {
     border-radius: 100px;
     text-decoration: none;
     border: 1px solid var(--border-glass);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
@@ -225,6 +228,7 @@ p {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: var(--space-md);
     font-weight: 600;
@@ -565,6 +569,7 @@ p {
     height: 48px;
     border-radius: 50%;
     background: var(--bg-glass);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-glass);
     display: flex;
@@ -614,33 +619,121 @@ p {
 /* ============================================ */
 /* MOBILE OPTIMIZATIONS */
 /* ============================================ */
+
+/* ============================================ */
+/* MOBILE OPTIMIZATIONS & IOS NATIVE FEEL */
+/* ============================================ */
 @media (max-width: 768px) {
     :root {
         --space-xl: 4rem;
         --space-lg: 3rem;
     }
 
+    /* iOS Safety: Prevent unwanted zooming and text inflation */
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    /* Better Mobile Typography */
     h1 {
         font-size: 2.5rem;
+        letter-spacing: -0.02em;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    /* Hero Full Height Fix for Mobile Browsers */
+    .hero {
+        min-height: 100dvh;
+        /* Uses dynamic viewport height */
+        padding: var(--space-lg) 0;
     }
 
     .hero-cta {
         flex-direction: column;
         width: 100%;
+        gap: 0.75rem;
     }
 
+    /* Native-like Buttons */
     .btn-primary,
     .btn-secondary {
         width: 100%;
         justify-content: center;
+        padding: 1.125rem 2rem;
+        /* Larger touch targets */
+        font-size: 1.05rem;
+        -webkit-appearance: none;
+        appearance: none;
+        /* Remove default iOS styling */
     }
 
+    /* Adjust Theme Toggle for Safe Area */
     .theme-toggle {
-        top: 1rem;
-        right: 1rem;
+        top: max(1rem, env(safe-area-inset-top));
+        right: max(1rem, env(safe-area-inset-right));
+        width: 44px;
+        /* Standard Apple touch target size */
+        height: 44px;
+    }
+
+    /* Adjust Container for Notches */
+    .container {
+        padding-left: max(var(--space-sm), env(safe-area-inset-left));
+        padding-right: max(var(--space-sm), env(safe-area-inset-right));
+    }
+
+    /* Grid Adjustments */
+    .profile-grid,
+    .tools-grid {
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+        gap: 1.5rem;
+    }
+
+    /* Timeline Mobile Fix */
+    .timeline {
+        margin-left: 0.5rem;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-item {
+        padding-left: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .timeline-dot {
+        width: 12px;
+        height: 12px;
+        left: -5px;
+    }
+
+    /* Improved Touch Feedback */
+    .glass-card:active,
+    .btn-primary:active,
+    .btn-secondary:active,
+    .copy-btn:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+
+    /* Fix Footer Sizing */
+    .footer {
+        padding-bottom: max(var(--space-lg), env(safe-area-inset-bottom));
+    }
+}
+
+/* Retina Display Optimization */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }
